@@ -20,9 +20,11 @@
     "test": "mocha",
     "prepublish": "browserify -o browser.js -e index.js -s index --bare"
   },
+  "dependencies": {
+    "define-property": "^0.1.3"
+  },
   "devDependencies": {
-    "mocha": "*",
-    "should": "*"
+    "mocha": "*"
   },
   "keywords": [
     "define",
@@ -41,6 +43,7 @@
       "list": [
         "mixin-deep",
         "mixin-object",
+        "define-property",
         "delegate-object",
         "forward-object"
       ]
