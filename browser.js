@@ -23,6 +23,8 @@ module.exports = function delegate(receiver, provider) {
   for (var key in provider) {
     defineProp(receiver, key, provider[key]);
   }
+
+  return receiver;
 };
 
 },{"define-property":2}],2:[function(require,module,exports){

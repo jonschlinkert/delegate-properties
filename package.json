@@ -1,7 +1,7 @@
 {
   "name": "delegate-properties",
   "description": "Copy properties from one object to another and make them non-enumerable, or make existing properties on an object non-enumerable.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/jonschlinkert/delegate-properties",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/delegate-properties",
