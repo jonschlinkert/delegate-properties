@@ -1,6 +1,6 @@
 # define-properties [![NPM version](https://badge.fury.io/js/define-properties.svg)](http://badge.fury.io/js/define-properties)
 
-> Copy properties from `provider` to `receiver` and make them non-enumerable.
+> Copy properties from one object to another and make them non-enumerable.
 
 ## Install
 
