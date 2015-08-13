@@ -16,7 +16,7 @@ var defineProp = require('define-property');
  * @param  {Object} `provider`
  */
 
-module.exports = function delegate(receiver, provider) {
+module.exports = function defineProps(receiver, provider) {
   for (var key in provider) {
     defineProp(receiver, key, provider[key]);
   }
