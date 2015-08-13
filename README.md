@@ -1,6 +1,6 @@
 # define-properties [![NPM version](https://badge.fury.io/js/define-properties.svg)](http://badge.fury.io/js/define-properties)
 
-> Copy properties from one object to another and make them non-enumerable.
+> Copy properties from one object to another and make them non-enumerable, or make existing properties on an object non-enumerable.
 
 ## Install
 
@@ -35,6 +35,24 @@ console.log(receiver.lower('BAR')); // 'bar'
 // copied properties are non-enumerable
 console.log(receiver); // {}
 console.log(Object.keys(receiver)); // []
+```
+
+### make existing properties non-enumerable
+
+```js
+var obj = {
+  upper: function(val) {
+    return val.toUpperCase();
+  },
+  lower: function(val) {
+    return val.toLowerCase();
+  }
+};
+
+define(obj);
+console.log(obj) // {}
+obj.upper('foo') // 'FOO'
+obj.lower('BAR') // 'bar'
 ```
 
 ## Related projects
