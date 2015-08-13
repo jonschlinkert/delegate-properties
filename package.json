@@ -1,7 +1,7 @@
 {
   "name": "define-properties",
-  "description": "Copy properties from one object to another and make them non-enumerable.",
-  "version": "0.1.0",
+  "description": "Copy properties from one object to another and make them non-enumerable, or make existing properties on an object non-enumerable.",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/define-properties",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/define-properties",
