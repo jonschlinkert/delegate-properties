@@ -1,6 +1,6 @@
 # delegate-properties [![NPM version](https://badge.fury.io/js/delegate-properties.svg)](http://badge.fury.io/js/delegate-properties)
 
-> Copy properties from one object to another and make them non-enumerable, or make existing properties on an object non-enumerable.
+> Deep-clone properties from one object to another and make them non-enumerable, or make existing properties on an object non-enumerable.
 
 ## Install
 
