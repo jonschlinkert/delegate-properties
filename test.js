@@ -2,9 +2,9 @@
 
 /* deps: mocha */
 var assert = require('assert');
-var define = require('./');
+var delegate = require('./');
 
-describe('define', function () {
+describe('delegate', function () {
   it('should copy properties from receiver to provider:', function () {
     var provider = {
       upper: function(val) {
@@ -16,7 +16,7 @@ describe('define', function () {
     };
 
     var receiver = {};
-    define(receiver, provider);
+    delegate(receiver, provider);
 
     assert.equal(receiver.upper('foo'), 'FOO');
     assert.equal(receiver.lower('BAR'), 'bar');
@@ -32,7 +32,7 @@ describe('define', function () {
       }
     };
 
-    define(obj);
+    delegate(obj);
     assert.deepEqual(obj, {});
     assert.equal(obj.upper('foo'), 'FOO');
     assert.equal(obj.lower('BAR'), 'bar');
@@ -49,7 +49,7 @@ describe('define', function () {
     };
 
     var receiver = {};
-    define(receiver, provider);
+    delegate(receiver, provider);
     assert.deepEqual(receiver, {});
   });
 });

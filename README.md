@@ -1,4 +1,4 @@
-# define-properties [![NPM version](https://badge.fury.io/js/define-properties.svg)](http://badge.fury.io/js/define-properties)
+# delegate-properties [![NPM version](https://badge.fury.io/js/delegate-properties.svg)](http://badge.fury.io/js/delegate-properties)
 
 > Copy properties from one object to another and make them non-enumerable, or make existing properties on an object non-enumerable.
 
@@ -7,13 +7,20 @@
 Install with [npm](https://www.npmjs.com/)
 
 ```sh
-$ npm i define-properties --save
+$ npm i delegate-properties --save
 ```
 
 ## Usage
 
 ```js
-var define = require('define-properties');
+var delegate = require('delegate-properties');
+```
+
+### copy properties
+
+Copy properties and make them non-enumerable
+
+```js
 var provider = {
   upper: function(val) {
     return val.toUpperCase();
@@ -24,7 +31,9 @@ var provider = {
 };
 
 var receiver = {};
-define(receiver, provider);
+// an existing properties in the `receiver` 
+// object would be overwritten
+delegate(receiver, provider);
 
 receiver.upper('foo'), 'FOO');
 receiver.lower('BAR'), 'bar');
@@ -49,7 +58,7 @@ var obj = {
   }
 };
 
-define(obj);
+delegate(obj);
 console.log(obj) // {}
 obj.upper('foo') // 'FOO'
 obj.lower('BAR') // 'bar'
@@ -73,7 +82,7 @@ $ npm i -d && npm test
 
 ## Contributing
 
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/jonschlinkert/define-properties/issues/new)
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/jonschlinkert/delegate-properties/issues/new)
 
 ## Author
 
