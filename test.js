@@ -22,6 +22,21 @@ describe('delegate', function () {
     assert.equal(receiver.lower('BAR'), 'bar');
   });
 
+  it('should return receiver:', function () {
+    var provider = {
+      upper: function(val) {
+        return val.toUpperCase();
+      },
+      lower: function(val) {
+        return val.toLowerCase();
+      }
+    };
+
+    var receiver = delegate({}, provider);
+    assert.equal(receiver.upper('foo'), 'FOO');
+    assert.equal(receiver.lower('BAR'), 'bar');
+  });
+
   it('should make existing properties non-enumerable:', function () {
     var obj = {
       upper: function(val) {
