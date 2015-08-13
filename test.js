@@ -22,7 +22,23 @@ describe('define', function () {
     assert.equal(receiver.lower('BAR'), 'bar');
   });
 
-  it('should make properties non-enumerable:', function () {
+  it('should make existing properties non-enumerable:', function () {
+    var obj = {
+      upper: function(val) {
+        return val.toUpperCase();
+      },
+      lower: function(val) {
+        return val.toLowerCase();
+      }
+    };
+
+    define(obj);
+    assert.deepEqual(obj, {});
+    assert.equal(obj.upper('foo'), 'FOO');
+    assert.equal(obj.lower('BAR'), 'bar');
+  });
+
+  it('should make copied properties non-enumerable:', function () {
     var provider = {
       upper: function(val) {
         return val.toUpperCase();

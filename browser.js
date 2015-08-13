@@ -18,6 +18,8 @@ var defineProp = require('define-property');
  */
 
 module.exports = function defineProps(receiver, provider) {
+  provider = provider || receiver;
+
   for (var key in provider) {
     defineProp(receiver, key, provider[key]);
   }
