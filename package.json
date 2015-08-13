@@ -1,0 +1,49 @@
+{
+  "name": "define-properties",
+  "description": "Copy properties from `provider` to `receiver` and make them non-enumerable.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/define-properties",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/define-properties",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/define-properties/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "prepublish": "browserify -o browser.js -e index.js -s index --bare"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "keywords": [
+    "define",
+    "define-property",
+    "enumerable",
+    "key",
+    "non",
+    "non-enumerable",
+    "object",
+    "prop",
+    "property",
+    "value"
+  ],
+  "verb": {
+    "related": {
+      "list": [
+        "mixin-deep",
+        "mixin-object",
+        "delegate-object",
+        "forward-object"
+      ]
+    }
+  }
+}
