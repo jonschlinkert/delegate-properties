@@ -22,4 +22,6 @@ module.exports = function delegate(receiver, provider) {
   for (var key in provider) {
     defineProp(receiver, key, provider[key]);
   }
+
+  return receiver;
 };
