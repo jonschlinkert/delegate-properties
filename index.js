@@ -7,8 +7,9 @@
 
 'use strict';
 
-var cloneDeep = require('clone-deep');
-var defineProp = require('define-property');
+var lazy = require('lazy-cache')(require);
+lazy.cloneDeep = lazy('clone-deep');
+lazy.defineProp = lazy('define-property');
 
 /**
  * Delegate properties from `provider` to `receiver` and make them non-enumerable.
@@ -18,6 +19,9 @@ var defineProp = require('define-property');
  */
 
 module.exports = function delegate(receiver, provider) {
+  var defineProp = lazy.defineProp();
+  var cloneDeep = lazy.cloneDeep();
+
   provider = cloneDeep(provider || receiver);
 
   for (var key in provider) {
