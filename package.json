@@ -1,7 +1,7 @@
 {
   "name": "delegate-properties",
   "description": "Deep-clone properties from one object to another and make them non-enumerable, or make existing properties on an object non-enumerable.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/jonschlinkert/delegate-properties",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/delegate-properties",
@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "clone-deep": "^0.2.1",
-    "define-property": "^0.1.3"
+    "define-property": "^0.1.3",
+    "lazy-cache": "^0.1.0"
   },
   "devDependencies": {
     "mocha": "*"
