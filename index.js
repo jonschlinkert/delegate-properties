@@ -7,7 +7,6 @@
 
 'use strict';
 
-var cloneDeep = require('clone-deep');
 var define = require('define-property');
 
 /**
@@ -19,7 +18,7 @@ var define = require('define-property');
 
 module.exports = function delegate(receiver, provider, clone) {
   if (clone) {
-    provider = clone(provider || receiver);
+    provider = require('clone-deep')(provider || receiver);
   } else {
     provider = provider || receiver;
   }
