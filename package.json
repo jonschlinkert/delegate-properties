@@ -23,7 +23,6 @@
     "define-property": "^0.2.5"
   },
   "devDependencies": {
-    "clone-deep": "^0.2.4",
     "mocha": "*"
   },
   "keywords": [

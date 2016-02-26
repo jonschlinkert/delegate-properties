@@ -16,12 +16,8 @@ var define = require('define-property');
  * @param  {Object} `provider`
  */
 
-module.exports = function delegate(receiver, provider, clone) {
-  if (clone) {
-    provider = require('clone-deep')(provider || receiver);
-  } else {
-    provider = provider || receiver;
-  }
+module.exports = function delegate(receiver, provider) {
+  provider = provider || receiver;
 
   for (var key in provider) {
     define(receiver, key, provider[key]);

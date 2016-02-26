@@ -21,7 +21,6 @@ delegate(receiver, provider, clone);
 
 * `receiver`: (**Object**) The object receiving properties
 * `provider`: (**Object**) The object providing properties
-* `clone`: (**Boolean**) Pass `true` to deep clone the provider object
 
 ## Examples
 
@@ -44,8 +43,8 @@ var receiver = {};
 // object would be overwritten
 delegate(receiver, provider);
 
-receiver.upper('foo'), 'FOO');
-receiver.lower('BAR'), 'bar');
+receiver.upper('foo');
+receiver.lower('BAR');
 
 console.log(receiver.upper('foo')); // 'FOO' 
 console.log(receiver.lower('BAR')); // 'bar'
