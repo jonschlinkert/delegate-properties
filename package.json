@@ -10,7 +10,9 @@
   },
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "LICENSE",
+    "README.md"
   ],
   "main": "index.js",
   "engines": {
@@ -28,23 +30,25 @@
   "keywords": [
     "define",
     "define-property",
+    "delegate",
     "enumerable",
     "key",
     "non",
     "non-enumerable",
     "object",
     "prop",
+    "properties",
     "property",
     "value"
   ],
   "verb": {
     "related": {
       "list": [
-        "mixin-deep",
-        "mixin-object",
         "define-property",
         "delegate-object",
-        "forward-object"
+        "forward-object",
+        "mixin-deep",
+        "mixin-object"
       ]
     }
   }
